@@ -5,6 +5,7 @@ public class Dispatcher {
     private StudentView studentView;
     private SchoolView schoolView;
     private HomeView homeView;
+    private NoImportView noImportView;
 
     public Dispatcher() {
         studentView = new StudentView();
@@ -20,7 +21,10 @@ public class Dispatcher {
             case ("SCHOOL"):
                 schoolView.show();
                 break;
+            case ("HONE"):
+                homeView.show();
             default:
+                noImportView.show();
                 homeView.show();
                 break;
         }
