@@ -23,7 +23,7 @@ public class HibernateConfig
 
         //change the next line of code to match your MySQL URL and port
 
-        config.setProperty("hibernate.connection.url", "127.0.0.1/3306");
+        config.setProperty("hibernate.connection.url", "127.0.0.1:3306");
 
         //change the next two lines of code to match your MySQL user name and password.
 
