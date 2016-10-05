@@ -1,21 +1,24 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
-import java.util.Scanner;
+/**
+ * Created by Carlee on 2016-09-20.
+ */
+        import java.util.Scanner;
 
 public class JavaCollections {
-    public JavaCollections() {
-    }
 
     public static void main(String[] args) {
+
+        //creates new scanner
         Scanner scanner = new Scanner(System.in);
+
+        //Prompts user for input
         System.out.println("Select one of the following. \n1 = Map \n2 = List \n3 = Set \n4 = Tree");
-        Integer input = Integer.valueOf(scanner.nextInt());
-        switch(input.intValue()) {
+
+        //saves user input
+        Integer input = scanner.nextInt();
+
+        switch (input) {
             case 1:
-                JavaCollectionsMap.createMap();
+                JavaCollectionsMap.createMap() ;
                 break;
             case 2:
                 JavaCollectionsList.createList();
@@ -28,7 +31,15 @@ public class JavaCollections {
                 break;
             default:
                 System.out.println("Enter a valid option.");
+                break;
         }
+
+
+        //NOTES
+        //List in Java provides ordered and indexed collection which may contain duplicates
+        //Set provides an un-ordered collection of unique objects, doesn't allow duplicates
+        //Map provides a data structure based on key value pair and hashing
+        // All three are interfaces in Java
 
     }
 }

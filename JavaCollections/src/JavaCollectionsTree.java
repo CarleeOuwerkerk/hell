@@ -11,21 +11,38 @@ public class JavaCollectionsTree {
     }
 
     public static void createTree() {
-        TreeSet treeSet = new TreeSet();
+
+    //creates a new treeSet called set
+    TreeSet treeSet = new TreeSet();
+
+
+    //HAPPY PATH
+
+    //this will create the treeSet
         treeSet.add(4);
         treeSet.add(9);
         treeSet.add(11);
 
-
+    //returns the least element larger than this given element
         System.out.println(treeSet.ceiling(8));
 
-        Integer value = 11;
-        if(treeSet.contains(value)) {
-            System.out.println(value + " is in this TreeSet.");
-        } else {
-            System.out.println(value + " is not in this TreeSet.");
-        }
+    Integer value = 11;
 
+    //checks whether item is in set
+        if (treeSet.contains(value)){
+        System.out.println(value + " is in this TreeSet.");
+    } else{
+        System.out.println(value + " is not in this TreeSet.");
+    }
+
+    //returns descending order of all elements
+         System.out.println(treeSet.descendingSet());
+
+    //returns size
+        System.out.println("This TreeSet has " + treeSet.size() + " elements in it.");
+
+    //clears all elements from set
+        treeSet.clear();
 
         TreeSet treeSetTwo = new TreeSet();
 
@@ -54,11 +71,17 @@ public class JavaCollectionsTree {
 
         //NASTY PATH
 
-        treeSet.add(9.1);
-
-
-
+        //this is a double, but should be in integer
+        //returns null
         System.out.println(treeSet.ceiling(8.5));
+
+
+
+        //NOTES
+
+        //treeSet orders by value, no duplicate elements
+        //hashSet is faster than treeSet
+        //it's usually faster to create a hashSet first, then convert it to a treeSet
     }
 
 }
