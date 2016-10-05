@@ -11,7 +11,7 @@ public class JavaCollections {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Select one of the following to create it. \n1 = Map \n2 = List \n3 = Set \n4 = Tree");
+        System.out.println("Select one of the following. \n1 = Map \n2 = List \n3 = Set \n4 = Tree");
         Integer input = Integer.valueOf(scanner.nextInt());
         switch(input.intValue()) {
             case 1:
