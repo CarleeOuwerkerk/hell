@@ -91,6 +91,13 @@ public class JavaCollectionsSet {
         System.out.println(set);
 
 
+        //NASTY PATH
+
+        //This tries to remove null.
+        //returns false
+        System.out.println(set.contains(null));
+
+
 
         //NOTES
 

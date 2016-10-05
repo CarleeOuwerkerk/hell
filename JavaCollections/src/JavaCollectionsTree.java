@@ -73,7 +73,59 @@ public class JavaCollectionsTree {
 
         //this is a double, but should be in integer
         //returns null
-        System.out.println(treeSet.ceiling(8.5));
+        try {
+            treeSet.add(4);
+            treeSet.add(9);
+            treeSet.add(11);
+            System.out.println(treeSet.ceiling(8.5));
+        }
+        catch(Exception e){
+            System.out.println("You can not insert a double here.");
+        }
+
+
+        //NASTY PATH
+
+        //This tries to insert a double, but should be in an integer
+        try {
+            treeSet.add(8.4);
+        }
+        catch(Exception e){
+            System.out.println("You can not add a double to this set.");
+        }
+
+
+        //NASTY PATH
+
+        //This tries to insert a null
+        try {
+            treeSet.add(null);
+        }
+        catch(Exception e){
+            System.out.println("You can not insert a null here.");
+        }
+
+
+        //NASTY PATH
+
+        //should return the element higher, but this is the highest element
+        System.out.println(treeSet.higher(11));
+
+
+        //NASTY PATH
+
+        //Grabs the first and last element from an empty set
+        TreeSet treeSetThree = new TreeSet();
+        System.out.println(treeSetThree.pollFirst());
+        System.out.println(treeSetThree.pollLast());
+
+
+        //NASTY PATH
+
+        //remove something that doesn't exist
+        //returns false
+        System.out.println(treeSetThree.remove(3));
+
 
 
 
