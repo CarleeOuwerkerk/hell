@@ -78,29 +78,34 @@ public class JavaCollectionsList {
         //NASTY PATH
 
         //sets the element at an index that doesn't exist
-//        try {
-//            list.set(7, "Sense & Sensibility");
-//        }
-//        catch(Exception e) {
-//            e.printStackTrace();
-//        }
+        try {
+            list.set(7, "Sense & Sensibility");
+        }
+        catch(Exception e) {
+            System.out.println("You can not set the value of this index; it does not exist.");
+        }
 
 
         //NASTY PATH
 
         //gets an elements at an index that doesn't exist
-//        try{
-//            System.out.println(list.get(8));
-//        }
-//        catch(Exception e){
-//            e.printStackTrace();
-//        }
+        try{
+            System.out.println(list.get(8));
+        }
+        catch(Exception e){
+            System.out.println("You can not get the value of this index; it does not exist.");
+        }
 
 
         //NASTY PATH
 
         //removes an element that doesn't exist
-//        System.out.println(list.remove(7));
+        try{
+            System.out.println(list.remove(7));
+        }
+        catch(Exception e){
+            System.out.println("You can not remove the element in this index; it does not exist.");
+        }
 
 
         //NASTY PATH
@@ -117,7 +122,19 @@ public class JavaCollectionsList {
         //NASTY PATH
 
         //gets index of an element that doesn't exist
-//        System.out.println("The index of this element is " + list.indexOf("The Scarlet Letter"));
+        try{
+            System.out.println("The index of this element is " + list.indexOf("The Scarlet Letter"));
+        }
+        catch(Exception e){
+            System.out.println("This element doesn't exist");
+        }
+
+
+        //NASTY PATH
+
+        //returns null - not great
+        list.add(null);
+        System.out.println(list);
 
 
 
