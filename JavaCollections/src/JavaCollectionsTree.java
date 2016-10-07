@@ -35,6 +35,10 @@ public class JavaCollectionsTree {
         System.out.println(value + " is not in this TreeSet.");
     }
 
+    //get the element that is equal to or next lesser to number
+        System.out.println(treeSet.floor(7));
+
+
     //returns descending order of all elements
          System.out.println(treeSet.descendingSet());
 
@@ -126,6 +130,24 @@ public class JavaCollectionsTree {
         //returns false
         System.out.println(treeSetThree.remove(3));
 
+
+        //NASTY PATH
+
+        //tries to find ceiling for null
+        //throws error
+        try {
+            System.out.println(treeSet.ceiling(null));
+        }
+        catch(Exception e){
+            System.out.println("You cannot enter a null element.");
+        }
+
+
+        //NASTY PATH
+
+        //tries to find floor for element that's lower than every element in treeSet
+        //returns null
+            System.out.println(treeSet.floor(1));
 
 
 

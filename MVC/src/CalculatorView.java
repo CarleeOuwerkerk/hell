@@ -1,9 +1,9 @@
 /**
  * Created by Carlee on 2016-09-27.
  */
-//The view's only job is to display what the user sees
-//It performs no calculations, but instead passes info entered by
-//user to whomever needs it.
+//Any code that is used to
+//communicate with the user OR ANY OTHER COMPUTING SYSTEM
+//requesting or sending data
 
 import java.awt.event.ActionListener;
 

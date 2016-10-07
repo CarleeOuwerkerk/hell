@@ -87,11 +87,34 @@ public class JavaCollectionsMap {
 
         //NASTY PATH
 
-        //This one enters null as the key - only one null can exist in a single map.
-        //the key is null
+        //This one enters an empty string as the key - only one null/empty string can exist in a single map.
+        //the key is an empty string
         map.put("", 5);
         System.out.println(map);
 
+
+        //NASTY PATH
+
+        //Insert a null key and null value
+        //inserts as null
+        map.put(null, null);
+        System.out.println(map);
+
+
+        //NASTY PATH
+
+        //remove a null
+        //removes the null element
+        map.remove(null);
+        System.out.println(map);
+
+
+        //NASTY PATH
+
+        //add two of the same item
+        //replaces the old element
+        map.put("Harry Potter", 7);
+        System.out.println(map);
 
 
 

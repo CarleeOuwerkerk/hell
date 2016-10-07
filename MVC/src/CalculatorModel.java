@@ -1,8 +1,8 @@
 /**
  * Created by Carlee on 2016-09-27.
  */
-//the model performs all the calculations needed.  That's it.
-//It doesn't know that the view exists.
+//The model is the data, a representation of
+//the data, and code that hides how the data is accessed and stored.
 
 public class CalculatorModel {
 

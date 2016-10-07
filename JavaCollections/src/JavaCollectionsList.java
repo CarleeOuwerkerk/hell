@@ -44,10 +44,9 @@ public class JavaCollectionsList {
         System.out.println("The first occurrence of Pride & Prejudice in the list is in the position of index "
                 + list.indexOf("Pride & Prejudice") + ".");
 
-        //iterator - gets each element in the list
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
+        //sets an element in a specific index
+        list.set(1, "Dark Matter");
+        System.out.println(list);
 
         //check whether the list is empty (boolean)
         if (list.isEmpty()){
@@ -137,6 +136,7 @@ public class JavaCollectionsList {
         System.out.println(list);
 
 
+        //merging lists together
 
         list.clear();
 
@@ -145,7 +145,7 @@ public class JavaCollectionsList {
         //This line will only allow a certain type into the list
         //        List<String> list = new List<String>();
         //This would cause an error if a non-String type was added
-        //wouoldn't need to cast in this case
+        //wouldn't need to cast in this case
 
         //sometimes called a sequence
         //may contain duplicate elements

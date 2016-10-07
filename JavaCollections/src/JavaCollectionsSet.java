@@ -66,9 +66,10 @@ public class JavaCollectionsSet {
         //NASTY PATH
 
         //This adds the same element twice.
-        //returns false
-        System.out.println(set.add("Jane Eyre"));
-        System.out.println(set.add("Jane Eyre"));
+        //the second one won't work
+        set.add("Jane Eyre");
+        set.add("Jane Eyre");
+        System.out.println(set);
 
 
 
@@ -97,6 +98,15 @@ public class JavaCollectionsSet {
         //returns false
         System.out.println(set.contains(null));
 
+
+        //NASTY PATH
+
+        //inserts a nul
+        //adds null to the set
+        set.add(null);
+        System.out.println(set);
+
+        //union, intersections, and unique overlap(inverse of intersection)(set, overlaps disappear)
 
 
         //NOTES
