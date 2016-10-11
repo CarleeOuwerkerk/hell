@@ -6,8 +6,6 @@
 import java.util.ArrayList;
 
 public class JavaCollectionsList {
-    public JavaCollectionsList() {
-    }
 
     public static void createList() {
 
