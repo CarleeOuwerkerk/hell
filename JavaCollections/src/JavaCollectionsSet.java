@@ -3,7 +3,10 @@
 // (powered by Fernflower decompiler)
 //
 
+import com.sun.org.apache.xalan.internal.lib.ExsltSets;
+
 import java.util.HashSet;
+import java.util.StringJoiner;
 
 public class JavaCollectionsSet {
 
@@ -60,6 +63,46 @@ public class JavaCollectionsSet {
             System.out.println("This set is not empty.");
         }
 
+        //Create two sets
+        HashSet<String> setOne = new HashSet<String>();
+        setOne.add("Canada");
+        setOne.add("Iceland");
+        setOne.add("Italy");
+
+        HashSet<String> setTwo = new HashSet<String>();
+        setTwo.add("Calgary");
+        setTwo.add("Iceland");
+        setTwo.add("Durban");
+
+        //union the two sets
+        HashSet union = new HashSet(setOne);
+        union.addAll(setTwo);
+        System.out.println(union);
+
+        //intersection
+        HashSet intersection = new HashSet(setOne);
+        intersection.retainAll(setTwo);
+        System.out.println(intersection);
+
+        //symmetric difference
+        HashSet<String> symmetricDifference = new HashSet<String>();
+        symmetricDifference.addAll(setOne);
+        symmetricDifference.addAll(setTwo);
+        symmetricDifference.removeAll(intersection);
+        System.out.println(symmetricDifference);
+
+
+//        HashSet asymmetricDifferenceOne = new HashSet(setOne);
+//        asymmetricDifferenceOne.removeAll(setTwo);
+//
+//        HashSet asymmetricDifferenceTwo = new HashSet(setTwo);
+//        asymmetricDifferenceTwo.removeAll(setOne);
+//        System.out.println(asymmetricDifferenceTwo);
+//
+//        HashSet symmetricDifference = new HashSet(asymmetricDifferenceTwo);
+//        union.addAll(asymmetricDifferenceOne);
+//        System.out.println("symmetricDifference" + symmetricDifference);
+
 
 
 
@@ -106,7 +149,6 @@ public class JavaCollectionsSet {
         set.add(null);
         System.out.println(set);
 
-        //union, intersections, and unique overlap(inverse of intersection)(set, overlaps disappear)
 
 
         //NOTES
