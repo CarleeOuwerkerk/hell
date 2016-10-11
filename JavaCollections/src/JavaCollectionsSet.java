@@ -92,18 +92,6 @@ public class JavaCollectionsSet {
         System.out.println(symmetricDifference);
 
 
-//        HashSet asymmetricDifferenceOne = new HashSet(setOne);
-//        asymmetricDifferenceOne.removeAll(setTwo);
-//
-//        HashSet asymmetricDifferenceTwo = new HashSet(setTwo);
-//        asymmetricDifferenceTwo.removeAll(setOne);
-//        System.out.println(asymmetricDifferenceTwo);
-//
-//        HashSet symmetricDifference = new HashSet(asymmetricDifferenceTwo);
-//        union.addAll(asymmetricDifferenceOne);
-//        System.out.println("symmetricDifference" + symmetricDifference);
-
-
 
 
         //NASTY PATH
