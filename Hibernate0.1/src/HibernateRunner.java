@@ -172,7 +172,7 @@ public class HibernateRunner {
 
         int numUsers = users.size();
         System.out.println("user count: " + numUsers);
-        for(int i = 0; i < numUsers; i++){
+       for(int i = 0; i < numUsers; i++){
             System.out.println("deleting user "+users.get(i).getUname());
             session.delete(users.get(i));
         }
