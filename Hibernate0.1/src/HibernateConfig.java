@@ -27,9 +27,9 @@ public class HibernateConfig
 
         //change the next two lines of code to match your MySQL user name and password.
 
-        config.setProperty("hibernate.connection.username", "root");
+        config.setProperty("hibernate.connection.username", "root2");
 
-        config.setProperty("hibernate.connection.password", "root");
+        config.setProperty("hibernate.connection.password", "password");
 
         //change the pool size to reflect how many users you expect your application to have initially
 
