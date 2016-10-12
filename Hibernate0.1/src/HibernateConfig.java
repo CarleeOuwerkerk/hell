@@ -23,13 +23,13 @@ public class HibernateConfig
 
         //change the next line of code to match your MySQL URL and port
 
-        config.setProperty("hibernate.connection.url", "127.0.0.1:3306");
+        config.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/test");
 
         //change the next two lines of code to match your MySQL user name and password.
 
-        config.setProperty("hibernate.connection.username", "root2");
+        config.setProperty("hibernate.connection.username", "root");
 
-        config.setProperty("hibernate.connection.password", "password");
+        config.setProperty("hibernate.connection.password", "root");
 
         //change the pool size to reflect how many users you expect your application to have initially
 
@@ -43,7 +43,7 @@ public class HibernateConfig
 		 * un-comment the next line of code if you want to be able to drop and recreate tables for your data classes listed below.  This is generally a bad idea for security reasons.
 		 */
 
-        //config.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+       // config.setProperty("hibernate.hbm2ddl.auto", "create-drop");
 
         config.setProperty("hibernate.show_sql", "true");
 
@@ -63,8 +63,10 @@ public class HibernateConfig
  * There have been several changes to the Hibernate libraries.
  * Please uncomment the source code for the version of Hibernate you are using.
 */
-         /*Hibernate 4.3 - 5.x */  ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();
-        /*Hibernate 3.x - 4.2*/  // ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
+         /*Hibernate 4.3 - 5.x */
+         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(config.getProperties()).build();
+        /*Hibernate 3.x - 4.2*/
+        // ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(config.getProperties()).buildServiceRegistry();
 
         sessionFactory = config.buildSessionFactory(serviceRegistry);
     }
