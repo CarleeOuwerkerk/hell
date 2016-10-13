@@ -35,6 +35,10 @@ public class HibernateConfig
 
         config.setProperty("hibernate.connection.pool_size", "10");
 
+        // new to the the mapping we need to add this for error test.hibernate_sequence
+
+        config.setProperty("hibernate.id.new_generator_mappings","false");
+
         config.setProperty("hibernate.connection.autocommit", "true");
 
         config.setProperty("hibernate.cache.provider_class", "org.hibernate.cache.NoCacheProvider");
