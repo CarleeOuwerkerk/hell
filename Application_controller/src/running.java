@@ -10,18 +10,18 @@ public class running {
             Scanner reader = new Scanner(System.in);
             System.out.println("\n\n\nwhat do you want to run? \n 1. working \n 2. school \n 0. EXIT");
             int n = reader.nextInt();
-            PageOne pageone = new PageOne();
             Matts matts = new Matts();
             switch (n) {
                 case (1):
-                    pageone.dispatchRequest("HOME");
-                    pageone.dispatchRequest("STUDENT");
+                    matts.dispatchRequest("HOME");
+                    matts.dispatchRequest("STUDENT");
                     break;
                 case (2):
                     matts.dispatchRequest("SCHOOL");
                     break;
                 case (3):
-                    pageone.dispatchRequest("");
+                    matts.dispatchRequest("");
+                    break;
                 default:
                     i=false;
                     break;

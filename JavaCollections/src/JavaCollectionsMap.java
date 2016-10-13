@@ -7,8 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class JavaCollectionsMap {
-    public JavaCollectionsMap() {
-    }
 
     public static void createMap() {
 

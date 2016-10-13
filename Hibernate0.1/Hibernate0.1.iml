@@ -16,5 +16,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Hibernate 5.2.3-5.2.3" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="mysql-connector-java-5.1.39-bin" level="project" />
+>>>>>>> origin/master
   </component>
 </module>

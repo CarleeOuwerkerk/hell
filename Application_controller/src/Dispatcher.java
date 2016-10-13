@@ -11,6 +11,7 @@ public class Dispatcher {
         studentView = new StudentView();
         schoolView = new SchoolView();
         homeView = new HomeView();
+        noImportView = new NoImportView();
     }
 
     public void dispatch(String request) {
