@@ -21,15 +21,6 @@ public class FahrenheitToCelsiusView implements Observer {
     private JTextField cNumber = new JTextField(5);
     private JFrame frame;
 
-    public void addButtonListener(final Runnable response) {
-        //This adds an action listener
-        button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
-                response.run();
-            }
-        });
-    }
-
     FahrenheitToCelsiusView() {
 
         frame = new JFrame("MVC Pattern Example");
@@ -56,6 +47,15 @@ public class FahrenheitToCelsiusView implements Observer {
         frame.getContentPane().add(panel,BorderLayout.WEST);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public void addButtonListener(final Runnable response) {
+        //This adds an action listener to the calculate button
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                response.run();
+            }
+        });
     }
 
     //this gets the number the user entered

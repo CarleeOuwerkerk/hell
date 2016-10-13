@@ -18,7 +18,7 @@ public class FahrenheitToCelsiusController extends Observable {
 
     public void setConvertToCelsius(Double FNumber){
 
-        CNumber = (FNumber - 32) * 1.8;
+        CNumber = (FNumber - 32) * 5/9;
         setChanged();
         notifyObservers();
     }
