@@ -9,6 +9,7 @@ public class FahrenheitToCelsiusModel {
     private static FahrenheitToCelsiusView view;
     private static FahrenheitToCelsiusController controller;
 
+    //should not be main class
     public static void main(String[] args){
 
 
@@ -18,6 +19,7 @@ public class FahrenheitToCelsiusModel {
         //lets view know when controller's state changes
         controller.addObserver(view);
 
+        //should be in controller
         //creates and sets listeners to the view
         view.addButtonListener(new Runnable(){
             public void run(){
@@ -25,3 +27,8 @@ public class FahrenheitToCelsiusModel {
             }
         });
     }}
+
+
+//get historical temperatures, add them to set of data.
+//add to that in c to f
+//can convert outside of model (in controller) to get temp in either f or c
