@@ -2,7 +2,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.StandardServiceRegistryBuilder;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 
 public class HibernateConfig
@@ -24,13 +24,15 @@ public class HibernateConfig
 
         //change the next two lines of code to match your MySQL user name and password.
 
-        config.setProperty("hibernate.connection.username", "bob");
+        config.setProperty("hibernate.connection.username", "root2");
 
-        config.setProperty("hibernate.connection.password", "somepass");
+        config.setProperty("hibernate.connection.password", "password");
 
         //change the pool size to reflect how many users you expect your application to have initially
 
-        config.setProperty("hibernate.connection.pool_size", "1");
+        config.setProperty("hibernate.connection.pool_size", "15");
+
+        config.setProperty("hibernate.id.new_generator_mappings","false");
 
         config.setProperty("hibernate.connection.autocommit", "true");
 
