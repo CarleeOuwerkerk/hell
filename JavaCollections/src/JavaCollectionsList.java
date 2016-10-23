@@ -69,6 +69,25 @@ public class JavaCollectionsList {
             System.out.println("This list is not empty.");
         }
 
+        //merging lists together
+        ArrayList<String> listOne = new ArrayList<String>();
+        listOne.add("Calgary");
+        listOne.add("Simi Valley");
+        listOne.add("Reykjavic");
+
+        ArrayList<String> listTwo = new ArrayList<String>();
+        listTwo.add("Berlin");
+        listTwo.add("Milan");
+        listTwo.add("Andorra");
+
+        ArrayList<String> completeList = new ArrayList<String>();
+        completeList.addAll(listOne);
+        completeList.addAll(listTwo);
+
+        System.out.println(listOne);
+        System.out.println(listTwo);
+        System.out.println(completeList);
+
 
 
 
@@ -134,9 +153,8 @@ public class JavaCollectionsList {
         System.out.println(list);
 
 
-        //merging lists together
-
         list.clear();
+
 
         //NOTES
 
@@ -159,8 +177,6 @@ public class JavaCollectionsList {
         //vector = not very common, similar to array, but all methods are synced
 
         //stack = a little different
-
-
 
     }
 }
