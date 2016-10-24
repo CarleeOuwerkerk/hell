@@ -14,7 +14,7 @@ public class HibernateConfig
     public HibernateConfig() {
         Configuration config = new Configuration();
 
-        config.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        config.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 
         config.setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
 
@@ -24,13 +24,13 @@ public class HibernateConfig
 
         //change the next two lines of code to match your MySQL user name and password.
 
-        config.setProperty("hibernate.connection.username", "root2");
+        config.setProperty("hibernate.connection.username", "root3");
 
         config.setProperty("hibernate.connection.password", "password");
 
         //change the pool size to reflect how many users you expect your application to have initially
 
-        config.setProperty("hibernate.connection.pool_size", "10");
+        config.setProperty("hibernate.connection.pool_size", "1");
 
         // new to the the mapping we need to add this for error test.hibernate_sequence
 

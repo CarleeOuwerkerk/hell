@@ -45,6 +45,11 @@ public class HibernateRunner {
         leeUser.setUname("lee");
         leeUser.setPword("barney");
 
+        User mattUser = new User();
+        mattUser.setUname("Matt");
+        mattUser.setPword("Fox");
+
+
         /*
          * save each instance as a record in the database
          */
