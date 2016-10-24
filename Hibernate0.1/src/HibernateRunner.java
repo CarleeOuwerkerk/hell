@@ -19,11 +19,12 @@ public class HibernateRunner {
     public static void main(String[] args){
 
         HibernateRunner aSillyHibernateUseExample = new HibernateRunner();
-        aSillyHibernateUseExample.addNewUsers();
-        aSillyHibernateUseExample.showAllUsers();
-        aSillyHibernateUseExample.modifyUser();
-        aSillyHibernateUseExample.addSharedPhoneNumber();
         aSillyHibernateUseExample.deleteAddedUsers();
+       // aSillyHibernateUseExample.addNewUsers();
+        //aSillyHibernateUseExample.showAllUsers();
+       // aSillyHibernateUseExample.modifyUser();
+       // aSillyHibernateUseExample.addSharedPhoneNumber();
+       // aSillyHibernateUseExample.deleteAddedUsers();
 
     }
 
@@ -47,11 +48,18 @@ public class HibernateRunner {
         leeUser.setUname("lee");
         leeUser.setPword("barney");
 
+
+        User mattUser = new User();
+        mattUser.setUname("matt");
+        mattUser.setPword("Fox");
+
+
         /*
          * save each instance as a record in the database
          */
         session.save(aNameUser);
         session.save(leeUser);
+        session.save(mattUser);
         transaction.commit();
         /*
          * prove that the User instances were added to the database and that
@@ -59,6 +67,8 @@ public class HibernateRunner {
          */
         System.out.println("aUser generated ID is: " + aNameUser.getId());
         System.out.println("anotherUser generated ID is: " + leeUser.getId());
+        System.out.println("anotherUser generated ID is: " + mattUser.getId());
+
     }
 
     /*

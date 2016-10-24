@@ -6,12 +6,18 @@ import java.util.HashMap;
 public class runner {
     public static void main(String[] args){
         ApplicationController applicationController = new ApplicationController();
-        HashMap hashMap = new HashMap<Integer, String>();
-        hashMap.put(1,"matt");
-        hashMap.put(1,"fox");
-        hashMap.put(23,"the");
 
-        applicationController.handleRequest("put" , hashMap );
+        applicationController.mapCommand("the",new SpeakHandler());
+
+        String the = "the";
+
+        HashMap data = new HashMap();
+        data.put("matt","they");
+
+        applicationController.handleRequest(the,data);
+
+
+
 
     }
 }
