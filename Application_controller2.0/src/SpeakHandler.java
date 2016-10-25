@@ -11,4 +11,9 @@ public class SpeakHandler implements Handler {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void useIt(HashMap<String, Object> data) {
+
+    }
 }
