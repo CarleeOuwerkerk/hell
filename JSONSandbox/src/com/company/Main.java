@@ -1,3 +1,4 @@
+package com.company;
 
 import org.quickconnectfamily.json.JSONException;
 import org.quickconnectfamily.json.JSONInputStream;
@@ -57,8 +58,8 @@ public class Main {
             JSONInputStream jsoninput = new JSONInputStream(input);
 
             //write new objects to the file
-            jsonoutput.writeObject(John Stockton);
-            jsonoutput.writeObject(Karl Malone);
+            jsonoutput.writeObject("John Stockton");
+            jsonoutput.writeObject("Karl Malone");
         }
         catch (Exception e) {
             e.printStackTrace();

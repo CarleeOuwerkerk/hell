@@ -9,17 +9,37 @@ import java.util.Observable;
 
 public class FahrenheitToCelsiusController extends Observable {
 
-    private double CNumber;
+    public static void main(String[] args) {
 
-    public double getConvertToCelsius() {
 
-        return CNumber;
+        FahrenheitToCelsiusModel model = new FahrenheitToCelsiusModel();
+        FahrenheitToCelsiusView view = new FahrenheitToCelsiusView();
+
+    }
+//    private double CNumber;
+//
+//    public double getConvertToCelsius() {
+//
+//        return CNumber;
+//    }
+//
+//    public void setConvertToCelsius(Double FNumber){
+//
+//        CNumber = (FNumber - 32) * 5/9;
+//        setChanged();
+//        notifyObservers();
+//    }
+
+     Double temperature;
+     Double FTemperature;
+
+
+    public void convertTempToF(){
+
+    FTemperature = temperature * 1.8 + 32;
+
+
     }
 
-    public void setConvertToCelsius(Double FNumber){
 
-        CNumber = (FNumber - 32) * 5/9;
-        setChanged();
-        notifyObservers();
-    }
 }
