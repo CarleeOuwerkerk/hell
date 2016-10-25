@@ -8,13 +8,17 @@ public class runner {
         ApplicationController applicationController = new ApplicationController();
 
         applicationController.mapCommand("the",new SpeakHandler());
+        applicationController.mapCommand("tome",new SpeakHandler());
 
         String the = "the";
 
         HashMap data = new HashMap();
         data.put("matt","they");
+        data.put("to","he");
 
         applicationController.handleRequest(the,data);
+        applicationController.handleRequest("tome",data);
+        applicationController.handleRequest("no",data);
 
 
 

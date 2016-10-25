@@ -19,12 +19,11 @@ public class HibernateRunner {
     public static void main(String[] args){
 
         HibernateRunner aSillyHibernateUseExample = new HibernateRunner();
+        aSillyHibernateUseExample.addNewUsers();
+        aSillyHibernateUseExample.showAllUsers();
+        aSillyHibernateUseExample.modifyUser();
+        aSillyHibernateUseExample.addSharedPhoneNumber();
         aSillyHibernateUseExample.deleteAddedUsers();
-       // aSillyHibernateUseExample.addNewUsers();
-        //aSillyHibernateUseExample.showAllUsers();
-       // aSillyHibernateUseExample.modifyUser();
-       // aSillyHibernateUseExample.addSharedPhoneNumber();
-       // aSillyHibernateUseExample.deleteAddedUsers();
 
     }
 
