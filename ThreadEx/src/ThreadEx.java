@@ -77,12 +77,12 @@ public class ThreadEx {
                 break;
 
             case 3:
-                final lockEx worker = new lockEx();
+                final lockEx assistant = new lockEx();
 
                 Thread thOne = new Thread(new Runnable() {
                     public void run() {
                         try {
-                            worker.firstThread();
+                            assistant.firstThread();
                         } catch (InterruptedException ignored) {
                         }
                     }
@@ -91,7 +91,7 @@ public class ThreadEx {
                 Thread thTwo = new Thread(new Runnable() {
                     public void run() {
                         try {
-                            worker.secondThread();
+                            assistant.secondThread();
                         } catch (InterruptedException ignored) {
                         }
                     }
@@ -101,7 +101,7 @@ public class ThreadEx {
                 thTwo.start();
                 thOne.join();
                 thTwo.join();
-                worker.print();
+                assistant.print();
 
                 break;
 

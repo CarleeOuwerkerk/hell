@@ -70,7 +70,7 @@ class syncEx {
 
 class lockEx {
 
-    private int count = 1;
+    private int count = 0;
     private Lock hallPass = new ReentrantLock();
     private void increase() {
         for(int i=0; i<10000; i++){
@@ -105,7 +105,7 @@ class lockEx {
 
 class lockExError {
 
-    private int count = 1;
+    private int count = 0;
     private Lock hallPass = new ReentrantLock();
     private Lock hallPassTwo = new ReentrantLock();
     private void increase() {
@@ -115,7 +115,7 @@ class lockExError {
     }
 
     private void decrease() {
-        for(int i=0; i<10000; i++){
+        for(int i=0; i<1000; i++){
             count--;
         }
     }
@@ -128,20 +128,23 @@ class lockExError {
     }
 
     public void secondThread() throws InterruptedException {
+        try {
         hallPass.lock();
         decrease();
-        hallPassTwo.unlock();
+        hallPass.unlock();
+    }
+    catch (IllegalMonitorStateException CrossLock) {
+        CrossLock.printStackTrace();;
+    }
     }
 
     public void print() {
-            hallPass.lock();
-            hallPassTwo.lock();
+
 
 
             System.out.println("Count is: " + count);
 
-            hallPass.unlock();
-            hallPassTwo.unlock();
+
 
 
     }
